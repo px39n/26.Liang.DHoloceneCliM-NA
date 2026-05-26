@@ -1,0 +1,62 @@
+# ============================================================
+# 25.DPastCliM-NA  —  .gitignore
+# ============================================================
+
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+.eggs/
+dist/
+build/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# ---------- Data formats (prevent accidental commit) ----------
+*.nc
+*.nc4
+*.pkl
+*.pickle
+*.parquet
+*.zarr
+*.h5
+*.hdf5
+*.mat
+
+# ---------- Generated outputs ----------
+Results/
+*.png
+*.pdf
+*.err
+
+# ---------- LaTeX (entire folder except Figures/.gitkeep) ----------
+latex_paper/*
+!latex_paper/Figures/
+latex_paper/Figures/*
+!latex_paper/Figures/.gitkeep
+
+# ---------- Agent docs (machine-specific paths) ----------
+.agent/
+
+# ---------- Reference materials ----------
+related_docs/
+related_papers/
+
+# ---------- IDE / tools ----------
+.cursor/
+.playwright-mcp/
+.vscode/
+.idea/
+
+# ---------- Logs / HPC ----------
+*.log
+matlabjob.o*
+
+# ---------- OS ----------
+.DS_Store
+Thumbs.db
+desktop.ini
