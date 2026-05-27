@@ -6,7 +6,7 @@ A Python reimplementation and extension of the [DPastCliM-NA](https://github.com
 
 ## Method
 
-The pipeline applies **Principal Component Regression (PCR)** to downscale coarse Earth System Model (ESM) transient simulations to the GHCN station network, with uncertainty quantification via:
+The pipeline applies **Principal Component Regression (PCR)** to downscale raw Earth System Model (ESM) transient simulations using the GHCN station network, gridding the product and quantifying uncertainty via:
 
 1. **PCR calibration** on GHCN observations (1875-1999) with automatic PCA mode selection
 2. **Spatial Error Model (SEM)** + **ARMA(1,1)** noise modeling for stochastic realizations
