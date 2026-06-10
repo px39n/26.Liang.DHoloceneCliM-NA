@@ -1,4 +1,4 @@
-"""Build NA 0.20-deg downscaling grid + land mask, save to D:\\Dataset\\DPastCliM-NA\\static.
+"""Build NA 0.20-deg downscaling grid + land mask.
 
 Land mask: from Natural Earth 10m countries shapefile (rasterize onto 0.20 grid).
 Free, no account, ~6 MB shapefile.
@@ -9,7 +9,9 @@ import zipfile
 import numpy as np
 import xarray as xr
 
-OUT = Path(r"D:\Dataset\DPastCliM-NA\static")
+from _paths import DATA_ROOT
+
+OUT = DATA_ROOT / "static"
 OUT.mkdir(parents=True, exist_ok=True)
 
 # --- 1. Build target grid (NA 0.20 deg) ---

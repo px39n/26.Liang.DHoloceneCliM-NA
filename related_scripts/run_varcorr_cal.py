@@ -36,12 +36,14 @@ from caz.gridding import GridSpec, _albers_forward, variance_correction
 from caz.natneighbor import sibson_weight_matrix
 from caz.io.trace import load_trace_var, select_na_window, trace_time_to_year_month
 
-OUT_DIR     = Path(r"D:\Dataset\DPastCliM-NA\interim\trace21k\grid_cal")
-STATION_DIR = Path(r"D:\Dataset\DPastCliM-NA\interim\trace21k\station_cal")
-MASK_PATH = Path(r"D:\Dataset\DPastCliM-NA\static\landmask_NA_020.nc")
+from _paths import DATA_ROOT
+
+OUT_DIR     = DATA_ROOT / "interim" / "trace21k" / "grid_cal"
+STATION_DIR = DATA_ROOT / "interim" / "trace21k" / "station_cal"
+MASK_PATH   = DATA_ROOT / "static" / "landmask_NA_020.nc"
 TRACE = {
-    "tas": Path(r"D:\Dataset\DPastCliM-NA\TraCE21k\TraCE-21K-II.monthly.TREFHT.nc"),
-    "pr":  Path(r"D:\Dataset\DPastCliM-NA\TraCE21k\TraCE-21K-II.monthly.PRECT.nc"),
+    "tas": DATA_ROOT / "TraCE21k" / "TraCE-21K-II.monthly.TREFHT.nc",
+    "pr":  DATA_ROOT / "TraCE21k" / "TraCE-21K-II.monthly.PRECT.nc",
 }
 
 GRID_SPEC = GridSpec(

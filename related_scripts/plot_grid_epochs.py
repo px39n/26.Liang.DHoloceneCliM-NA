@@ -9,8 +9,10 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import xarray as xr
 
-GRID_NC = Path(r"D:\Dataset\DPastCliM-NA\interim\grid_test\grid_tas_NE_US_decadal.nc")
-OUT_DIR = Path(r"D:\OneDrive\Code\25.Liang.DPastCliM-NA\figures")
+from _paths import DATA_ROOT
+
+GRID_NC = DATA_ROOT / "interim" / "grid_test" / "grid_tas_NE_US_decadal.nc"
+OUT_DIR = Path(__file__).resolve().parents[1] / "figures"
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 
 

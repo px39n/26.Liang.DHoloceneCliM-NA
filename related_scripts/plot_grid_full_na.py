@@ -16,8 +16,10 @@ import matplotlib.pyplot as plt
 import xarray as xr
 
 
-GRID_DIR = Path(r"D:\Dataset\DPastCliM-NA\interim\grid_full_na")
-OUT_DIR = Path(r"D:\OneDrive\Code\25.Liang.DPastCliM-NA\figures")
+from _paths import DATA_ROOT
+
+GRID_DIR = DATA_ROOT / "interim" / "grid_full_na"
+OUT_DIR = Path(__file__).resolve().parents[1] / "figures"
 
 
 EPOCHS = [

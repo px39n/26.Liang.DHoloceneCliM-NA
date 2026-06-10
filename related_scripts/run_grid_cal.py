@@ -39,7 +39,8 @@ from tqdm import tqdm
 from caz.gridding import GridSpec, _albers_forward
 from caz.natneighbor import sibson_weight_matrix
 
-DATA_ROOT = Path(r"D:\Dataset\DPastCliM-NA")
+from _paths import DATA_ROOT
+
 GHCN_DIR = DATA_ROOT / "GHCN" / "interim"
 MASK_PATH = DATA_ROOT / "static" / "landmask_NA_020.nc"
 

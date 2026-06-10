@@ -41,11 +41,13 @@ from caz.io.trace import load_trace_var, select_na_window, trace_time_to_year_mo
 from caz.pcr import predict_month
 from caz.sem import simulate_arma_noise, inverse_sem
 
-MODEL_DIR = Path(r"D:\Dataset\DPastCliM-NA\interim\trace21k\models")
-OUT_DIR   = Path(r"D:\Dataset\DPastCliM-NA\interim\trace21k\station_cal")
+from _paths import DATA_ROOT
+
+MODEL_DIR = DATA_ROOT / "interim" / "trace21k" / "models"
+OUT_DIR   = DATA_ROOT / "interim" / "trace21k" / "station_cal"
 TRACE = {
-    "tas": Path(r"D:\Dataset\DPastCliM-NA\TraCE21k\TraCE-21K-II.monthly.TREFHT.nc"),
-    "pr":  Path(r"D:\Dataset\DPastCliM-NA\TraCE21k\TraCE-21K-II.monthly.PRECT.nc"),
+    "tas": DATA_ROOT / "TraCE21k" / "TraCE-21K-II.monthly.TREFHT.nc",
+    "pr":  DATA_ROOT / "TraCE21k" / "TraCE-21K-II.monthly.PRECT.nc",
 }
 
 YEAR_CAL_MIN = 1875

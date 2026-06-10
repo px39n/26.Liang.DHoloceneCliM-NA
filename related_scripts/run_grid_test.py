@@ -13,18 +13,17 @@ Output: D:\\Dataset\\DPastCliM-NA\\interim\\grid_test\\grid_tas_NE_US_decadal.nc
 from __future__ import annotations
 
 import time as _t
-from pathlib import Path
 
 import numpy as np
 import pandas as pd
 import xarray as xr
 
 from caz.gridding import GridSpec, idw_gridding
+from _paths import DATA_ROOT
 
-
-REC_NC = Path(r"D:\Dataset\DPastCliM-NA\interim\pcr_station\recon_station_tas.nc")
-GHCN_META = Path(r"D:\Dataset\DPastCliM-NA\GHCN\interim\ghcn_tas_meta.parquet")
-OUT_NC = Path(r"D:\Dataset\DPastCliM-NA\interim\grid_test\grid_tas_NE_US_decadal.nc")
+REC_NC    = DATA_ROOT / "interim" / "pcr_station" / "recon_station_tas.nc"
+GHCN_META = DATA_ROOT / "GHCN" / "interim" / "ghcn_tas_meta.parquet"
+OUT_NC    = DATA_ROOT / "interim" / "grid_test" / "grid_tas_NE_US_decadal.nc"
 
 
 def main():

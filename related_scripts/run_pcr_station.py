@@ -33,11 +33,13 @@ from caz.pcr import calibrate_month, predict_month
 
 
 # ---------------------------------------------------------------- inputs/outputs
-GHCN_OBS_TAS = Path(r"D:\Dataset\DPastCliM-NA\GHCN\interim\ghcn_tas_obs.parquet")
-GHCN_OBS_PR  = Path(r"D:\Dataset\DPastCliM-NA\GHCN\interim\ghcn_pr_obs.parquet")
-TRACE_T  = Path(r"D:\Dataset\DPastCliM-NA\TraCE21k\TraCE-21K-II.monthly.TREFHT.nc")
-TRACE_P  = Path(r"D:\Dataset\DPastCliM-NA\TraCE21k\TraCE-21K-II.monthly.PRECT.nc")
-OUT_DIR  = Path(r"D:\Dataset\DPastCliM-NA\interim\trace21k\models")
+from _paths import DATA_ROOT
+
+GHCN_OBS_TAS = DATA_ROOT / "GHCN" / "interim" / "ghcn_tas_obs.parquet"
+GHCN_OBS_PR  = DATA_ROOT / "GHCN" / "interim" / "ghcn_pr_obs.parquet"
+TRACE_T  = DATA_ROOT / "TraCE21k" / "TraCE-21K-II.monthly.TREFHT.nc"
+TRACE_P  = DATA_ROOT / "TraCE21k" / "TraCE-21K-II.monthly.PRECT.nc"
+OUT_DIR  = DATA_ROOT / "interim" / "trace21k" / "models"
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 
 YEAR_CAL_MIN = 1875

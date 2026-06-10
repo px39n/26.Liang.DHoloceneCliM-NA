@@ -33,7 +33,7 @@ from caz.io.mpi_esm import load_mpi_esm_var, mpi_esm_time_to_year_month
 from caz.pcr import predict_month
 from caz.sem import simulate_arma_noise, inverse_sem
 
-DATA_ROOT = Path(r"D:\Dataset\DPastCliM-NA")
+from _paths import DATA_ROOT
 
 YEAR_CAL_MIN = 1875
 

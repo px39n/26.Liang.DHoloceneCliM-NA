@@ -1,5 +1,6 @@
 """Shared utilities for all Paper_Code figure scripts."""
 from __future__ import annotations
+import os
 import shutil
 from pathlib import Path
 
@@ -8,7 +9,7 @@ RESULTS_MAIN = PROJECT_ROOT / "Results" / "main"
 RESULTS_SUP  = PROJECT_ROOT / "Results" / "supplementary"
 LATEX_FIG    = PROJECT_ROOT / "latex_paper" / "Figures"
 
-DATA_DIR     = Path(r"D:\Dataset\DPastCliM-NA")
+DATA_DIR     = Path(os.environ.get("DPASTCLIM_DATA_DIR", r"D:\Dataset\DPastCliM-NA"))
 GHCN_DIR     = DATA_DIR / "GHCN" / "interim"
 TRACE_DIR    = DATA_DIR / "TraCE21k"
 

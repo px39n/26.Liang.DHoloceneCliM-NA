@@ -20,13 +20,13 @@ Run:
 from __future__ import annotations
 import argparse
 import pickle
-from pathlib import Path
 
 import numpy as np
 import pandas as pd
 
-GHCN_DIR = Path(r"D:\Dataset\DPastCliM-NA\GHCN\interim")
-DATA_ROOT = Path(r"D:\Dataset\DPastCliM-NA")
+from _paths import DATA_ROOT
+
+GHCN_DIR = DATA_ROOT / "GHCN" / "interim"
 
 SEED = 2026
 

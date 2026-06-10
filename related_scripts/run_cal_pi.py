@@ -33,7 +33,7 @@ from caz.io.mpi_esm import load_mpi_esm_var, mpi_esm_time_to_year_month
 from caz.sem import fit_sem, fit_arma_per_station
 from caz.gridding import _albers_forward
 
-DATA_ROOT = Path(r"D:\Dataset\DPastCliM-NA")
+from _paths import DATA_ROOT
 
 GHCN = {
     "tas": DATA_ROOT / "GHCN" / "interim" / "ghcn_tas_obs.parquet",

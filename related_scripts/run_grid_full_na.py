@@ -11,7 +11,6 @@ from __future__ import annotations
 
 import argparse
 import time as _t
-from pathlib import Path
 
 import numpy as np
 import pandas as pd
@@ -19,11 +18,12 @@ import xarray as xr
 
 from caz.gridding import GridSpec, idw_gridding
 
+from _paths import DATA_ROOT
 
-REC_DIR  = Path(r"D:\Dataset\DPastCliM-NA\interim\trace21k\station_cal")
-META_TAS = Path(r"D:\Dataset\DPastCliM-NA\GHCN\interim\ghcn_tas_meta.parquet")
-META_PR  = Path(r"D:\Dataset\DPastCliM-NA\GHCN\interim\ghcn_pr_meta.parquet")
-OUT_DIR  = Path(r"D:\Dataset\DPastCliM-NA\output\trace21k\full")
+REC_DIR  = DATA_ROOT / "interim" / "trace21k" / "station_cal"
+META_TAS = DATA_ROOT / "GHCN" / "interim" / "ghcn_tas_meta.parquet"
+META_PR  = DATA_ROOT / "GHCN" / "interim" / "ghcn_pr_meta.parquet"
+OUT_DIR  = DATA_ROOT / "output" / "trace21k" / "full"
 
 
 def main():

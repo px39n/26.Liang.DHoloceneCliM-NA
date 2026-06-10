@@ -1,0 +1,55 @@
+site_name: DHoloceneCliM-NA
+site_description: Downscaled Holocene Climate for North America — documentation
+repo_url: https://github.com/px39n/26.Liang.DHoloceneCliM-NA
+repo_name: 26.Liang.DHoloceneCliM-NA
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: teal
+      accent: amber
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: teal
+      accent: amber
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - toc.integrate
+    - content.code.copy
+    - search.suggest
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - Pipeline: pipeline.md
+  - Figures: figures.md
+  - Internal Data:
+      - Overview: dataset/index.md
+      - Input files: dataset/inputs.md
+      - Produced files: dataset/products.md
+      - Scripts ↔ Data: dataset/scripts.md
+      - Setup: dataset/setup.md
